@@ -1,0 +1,17 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/student.css' %}"/>
+</head>
+<form method="post" action="">
+    {% csrf_token %}
+    {{student_form}}
+    <div id="hello">
+        <label> Name</label>
+        {{ student_form.name }}
+    </div>
+    {% csrf_token %}
+    <div >
+    <input  id="button"  type="submit" value="submit">
+    </div>
+</form>
